@@ -35,7 +35,7 @@ jobs:
             java-version: 11
             distribution: 'temurin'
         - run: mvn -B package --file pom.xml -DskipTests
-        - run: mkdir test && cp target/* test
+        - run: mkdir test && cp target/*.war test
         - uses: actions/upload-artifact@v3
           with:
             name: Package
